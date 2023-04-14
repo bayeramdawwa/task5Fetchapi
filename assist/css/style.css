@@ -1,0 +1,260 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.hero{
+  padding: 0 30px;
+ max-width:  100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+  justify-content: center;
+  background-image: url(../img/black-photoshop-background-png-15.jpg);
+  background-size: cover;
+}
+
+.searchBox {
+  margin-top: 30px;
+  background: rgb(213, 213, 221);
+  height: 40px;
+  border-radius: 40px;
+  padding: 15px;
+  color: white;
+  display: flex;
+align-items: center;
+}
+
+
+
+.searchButton {
+  
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #091930;
+  border: none;
+  padding: 10px;
+  
+}
+
+.searchInput {
+
+  border:none;
+  background: none;
+
+  color: rgb(8, 8, 8);
+  font-size: 23px;
+  width: 400px;
+
+}
+
+  .hero .cards{
+    display: flex;
+   max-width:  100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:50px;
+  }
+
+  .cardd{
+    display: none;
+  }
+
+  .hero .cards .card{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 30px;
+    width: 300px;
+    padding: 20px;
+    position: relative;
+    background-color: rgb(235, 235, 241);
+    box-shadow: 0px 4px 20px 0px rgba(40, 40, 40, 0.15);
+    border-radius: 20px;
+    color: rgb(3, 3, 3);
+    font-weight:bolder;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+
+  }
+
+  .hero .cards .card:before {
+    content: '';
+    background: linear-gradient(45deg,  #7084e7, #9648e9, #3953d3, #7b38c2);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    color: white;
+}
+.hero .cards .card:active {
+  color: rgb(240, 237, 237);
+}
+
+.hero .cards .card:active:after {
+  background: transparent;
+}
+
+.hero .cards .card:hover:before {
+  opacity: 1;
+}
+
+.hero .cards .card:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+  .hero .cards .card:hover{
+    width: 320px;
+     transition-duration: 0.5s;
+     color: blanchedalmond;
+  }
+
+
+  .hero .cards .card:hover .price{
+    color: rgb(134, 216, 158);
+  }
+
+  
+  .hero .cards .card h1{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
+  
+  .hero .cards .card img{
+    height: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+
+  }
+ 
+  .hero .cards .card p{
+    text-align:center;
+    margin-bottom: 20px;
+  }
+
+  .hero .cards .card .price{
+    color: rgb(7, 128, 7);
+    
+  
+   
+  }
+  
+  
+
+  .hero .cards .card button{
+    padding: 10px;
+    border-radius: 20px;
+    width: 200px;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    position: relative;
+    background-color: rgb(2, 2, 5);
+    border-radius: 10px;
+    animation-duration: 2s;
+    animation-name: button;
+    margin-bottom: 10px;
+}
+.hero .cards .card button:hover{
+ transition-duration: 2s;
+  width: 300px;
+  
+}
+
+@keyframes button{
+  from{
+      width: 150px;
+  }
+  to{
+      width: 200px;
+  }
+
+}
+
+
+
+
+.hero .load-less{
+  display: flex;
+  margin: 30px 0;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+
+}
+
+.hero .load-less button{
+  padding: 10px;
+  border-radius: 20px;
+  width: 100px;
+  margin: 0 10px;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(2, 2, 5);
+  font-size: large;
+  font-weight: bolder;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+ 
+
+}
+.hero .load-less button:hover{
+
+
+  transition-duration: 2s;
+  width: 150px;
+
+}
+
+@media screen and (max-width: 620px) {
+  .hero .cards .card{
+    margin: 10px 10px;
+  }
+  }
+@media screen and (max-width: 620px) {
+ .searchInput {
+      width:150px;
+      padding: 0 6px;
+  }
+  }
+
+  @media screen and (max-width: 444px) {
+   
+    .hero{
+      padding: 0 5px;
+     max-width:  100%;
+      
+    
+    }
+  }
